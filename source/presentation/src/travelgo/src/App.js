@@ -11,7 +11,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to TravelGO</h1>
         </header>
         <p className="App-intro">
-         Think to travel... everything, everywhere, every days... and GO
+         Think abaout travel... everything, everywhere, every days... and GO
         </p>
       </div>
     );
