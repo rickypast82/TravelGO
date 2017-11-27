@@ -7,4 +7,5 @@ const reducers = combineReducers({
     travelList
 })
 
+
 export default reducers;
