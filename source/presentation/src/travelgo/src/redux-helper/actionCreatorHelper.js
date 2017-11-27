@@ -1,6 +1,6 @@
 //@flow
 type ActionType=string;
-type ActionPayload = {[string]:any};
+export type ActionPayload = {[string]:any};
 type ActionMeta = {[string]:any};
 
 export type Action = {
@@ -8,6 +8,7 @@ export type Action = {
     payload:ActionPayload,
     meta?:ActionMeta
 }
+
 export const actionCreatorBase = (type:ActionType,payload:ActionPayload):Action => {
     return {
         type,
