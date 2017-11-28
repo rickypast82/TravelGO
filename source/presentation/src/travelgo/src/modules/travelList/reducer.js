@@ -1,5 +1,5 @@
 
-import { Record, Map, List} from 'immutable'
+import { Record, List} from 'immutable'
 import { UPDATE_TRAVEL_LIST } from './actionDefinitions'
 
 const TravelRecord = Record({
