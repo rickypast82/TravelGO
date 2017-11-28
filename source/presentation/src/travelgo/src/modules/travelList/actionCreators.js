@@ -11,6 +11,7 @@ export type ActionUpdateTravelList = {
 };
 
 export const updateTravelList = (travels:TravelList):ActionUpdateTravelList =>{
+    
     return actionCreatorBase(UPDATE_TRAVEL_LIST,travels);
 }
 
