@@ -1,18 +1,24 @@
 
 import { Record, List} from 'immutable'
 import { UPDATE_TRAVEL_LIST } from './actionDefinitions'
+import { Action }  from '../../redux-helper'
 
-const TravelRecord = Record({
-    names: List(['Rome','New York'])
-})
+const TravelRecord = Record(({
+    names: List()
+}:{|
+    names:List<string>
+|}))
 
-const updateTravelList = (state,action) =>{
+const initialState = TravelRecord();
+export type TravelRecordType = typeof initialState;
+
+const updateTravelList = (state:TravelRecordType,action:Action) =>{
     const {travels} = action.payload;
     const names = List(travels);
     return state.set('names',names);
 }
 
-const initialState = TravelRecord();
+//$FlowFixMe
 const travel = (state = initialState, action)  => {
     switch (action.type) {
         case UPDATE_TRAVEL_LIST:{
