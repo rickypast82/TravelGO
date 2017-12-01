@@ -3,7 +3,7 @@ import { Record, List} from 'immutable'
 import { UPDATE_TRAVEL_LIST } from './actionDefinitions'
 
 const TravelRecord = Record({
-    names: List()
+    names: List(['Rome','New York'])
 })
 
 const updateTravelList = (state,action) =>{
@@ -13,7 +13,7 @@ const updateTravelList = (state,action) =>{
 }
 
 const initialState = TravelRecord();
-const travelList = (state = initialState, action)  => {
+const travel = (state = initialState, action)  => {
     switch (action.type) {
         case UPDATE_TRAVEL_LIST:{
             return updateTravelList(state,action);
@@ -25,4 +25,4 @@ const travelList = (state = initialState, action)  => {
 }
 
 export {TravelRecord};
-export default travelList;
+export default travel;

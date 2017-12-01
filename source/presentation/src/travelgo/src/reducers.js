@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import { responsiveStateReducer } from 'redux-responsive'
-import travelList from './modules/travelList/reducer'
+import travel from './modules/travel/reducer'
 
 const reducers = combineReducers({
     browser: responsiveStateReducer,
-    travelList
+    travel
 })
 
 

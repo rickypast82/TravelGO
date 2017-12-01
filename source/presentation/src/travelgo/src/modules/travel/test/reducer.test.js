@@ -1,10 +1,10 @@
 
 import { List } from 'immutable'
 import * as matchers from 'jest-immutable-matchers';
-import travelList, {TravelRecord} from '../reducer'
+import travel, {TravelRecord} from '../reducer'
 import { updateTravelList, type TravelList} from '../actionCreators'
 
-describe('travel list reducer test', () => {
+describe('travel  reducer test', () => {
 
     beforeEach(function () {
         jest.addMatchers(matchers);
@@ -13,12 +13,12 @@ describe('travel list reducer test', () => {
     it('update travel list', () => {
         const stateBefore = TravelRecord();
         const travels:TravelList = {travels:['Rome','New York']};
-        const stareAfter = travelList(stateBefore,updateTravelList(travels));
+        const stareAfter = travel(stateBefore,updateTravelList(travels));
         const stateExpected = TravelRecord({
             names: List(['Rome','New York'])
         })
         expect(stareAfter).toEqualImmutable(stateExpected);
     });
 
-
+    
 });
