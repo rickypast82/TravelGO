@@ -7,7 +7,7 @@ class App extends Component {
 	componentDidMount(){
 		console.log('qui lanciare la action di init ?')
 		/**
-		 * ci saraà poi un midleware che intercetta la chiamata init e faraà la fetch per inizializzare la travelList
+		 * ci saraà poi un midleware che intercetta la chiamata init e farà la fetch per inizializzare la travelList
 		 */
 	}
 

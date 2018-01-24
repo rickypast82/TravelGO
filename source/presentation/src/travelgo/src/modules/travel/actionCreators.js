@@ -1,17 +1,12 @@
 //@flow
-import { actionCreatorBase } from '../../redux-helper'
-import { UPDATE_TRAVEL_LIST} from './actionDefinitions'
-export type TravelList = {|
+import { actionCreatorBase, type Action } from '../../lib-redux-helper'
+import { UPDATE_COMPLETED_TRAVELS} from './actionDefinitions'
+
+export type CompletedTravels = {|
     travels:Array<string>
 |};
 
-export type ActionUpdateTravelList = {
-    type:typeof UPDATE_TRAVEL_LIST,
-    payload:TravelList
-};
-
-export const updateTravelList = (travels:TravelList):ActionUpdateTravelList =>{
-    
-    return actionCreatorBase(UPDATE_TRAVEL_LIST,travels);
+export function updateCompletedTravels(travels:CompletedTravels):Action<CompletedTravels>{
+    return actionCreatorBase(UPDATE_COMPLETED_TRAVELS,travels);
 }
 

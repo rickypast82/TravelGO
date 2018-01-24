@@ -1,3 +1,3 @@
 //@flow
-export type UpdateTravelList = 'UPDATE_TRAVEL_LIST';
-export const UPDATE_TRAVEL_LIST:UpdateTravelList= 'UPDATE_TRAVEL_LIST';
+export type UpdateCompletedTravels = 'UPDATE_COMPLETED_TRAVELS';
+export const UPDATE_COMPLETED_TRAVELS:UpdateCompletedTravels= 'UPDATE_COMPLETED_TRAVELS';

@@ -1,16 +1,17 @@
 //@flow
-import { updateTravelList, type TravelList,type ActionUpdateTravelList } from '../actionCreators';
-import { UPDATE_TRAVEL_LIST } from '../actionDefinitions';
+import { updateCompletedTravels, type CompletedTravels } from '../actionCreators';
+import { UPDATE_COMPLETED_TRAVELS } from '../actionDefinitions';
+import { Action } from '../../../lib-redux-helper/index';
 
-describe('travel list action creators test', () => {
+describe('travels action creators test', () => {
 
-    it('UPDATE_TRAVEL_LIST Action', () => {
-        const travels:TravelList = { travels: ['rome', 'NY'] };
-        const expected:ActionUpdateTravelList = {
-            type: UPDATE_TRAVEL_LIST,
+    it('UPDATE_COMPLETED_TRAVELS Action', () => {
+        const travels:CompletedTravels = { travels: ['rome', 'NY'] };
+        const expected:Action<CompletedTravels> = {
+            type: UPDATE_COMPLETED_TRAVELS,
             payload: travels
         }
-        const resUpdate = updateTravelList(travels);
+        const resUpdate = updateCompletedTravels(travels);
         expect(resUpdate).toEqual(expected)
     });
 

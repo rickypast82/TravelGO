@@ -1,7 +1,8 @@
-
+//@flow
 import { Record, List} from 'immutable'
-import { UPDATE_TRAVEL_LIST } from './actionDefinitions'
-import { Action }  from '../../redux-helper'
+import { UPDATE_COMPLETED_TRAVELS } from './actionDefinitions'
+import { type CompletedTravels } from './actionCreators'
+import { createLeaf, createReducer }  from '../../lib-redux-helper'
 
 const TravelRecord = Record(({
     names: List()
@@ -12,23 +13,15 @@ const TravelRecord = Record(({
 const initialState = TravelRecord();
 export type TravelRecordType = typeof initialState;
 
-const updateTravelList = (state:TravelRecordType,action:Action) =>{
-    const {travels} = action.payload;
+const updateCompletedTravels = function(state:TravelRecordType, payload:CompletedTravels):TravelRecordType{
+    const {travels} = payload;
     const names = List(travels);
     return state.set('names',names);
 }
 
-//$FlowFixMe
-const travel = (state = initialState, action)  => {
-    switch (action.type) {
-        case UPDATE_TRAVEL_LIST:{
-            return updateTravelList(state,action);
-        }
-        default:{
-            return state;
-        }
-    }    
-}
+const travel = createReducer(initialState,[
+    createLeaf( UPDATE_COMPLETED_TRAVELS, updateCompletedTravels)
+]);
 
 export {TravelRecord};
 export default travel;
