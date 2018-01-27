@@ -1,5 +1,4 @@
 // @flow
-import {List} from 'immutable'
 import * as matchers from 'jest-immutable-matchers';
 import * as MOCK from './mockeddata';
 
