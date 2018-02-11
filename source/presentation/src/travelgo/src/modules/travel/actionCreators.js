@@ -5,7 +5,8 @@ import { UPDATE_COMPLETED_TRAVELS} from './actionDefinitions'
 type BaseCompletedTravelsT = {|
     destination:string,
     departureDate:?number,
-    returnDate:?number
+    returnDate:?number,
+    note:string
 |}
 
 export type CompletedTravelsT = {|

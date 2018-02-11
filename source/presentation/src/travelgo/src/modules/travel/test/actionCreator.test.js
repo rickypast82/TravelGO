@@ -9,12 +9,14 @@ describe('travels action creators test', () => {
         const base1= {
             destination:'roma',
             departureDate:100,
-            returnDate:200
+            returnDate:200,
+            note:'note di roma'
         };
         const base2= {
             destination:'genova',
             departureDate:300,
-            returnDate:400
+            returnDate:400,
+            note:'note di genova'
         };
         const travels:CompletedTravelsT = [base1,base2];
 

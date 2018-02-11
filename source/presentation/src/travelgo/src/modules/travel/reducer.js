@@ -5,17 +5,20 @@ import { type CompletedTravelsT } from './actionCreators'
 import { createLeaf, createReducer }  from '../../lib-redux-helper'
 
 type TravelDestination=string;
+type TravelNote=string;
 
 export const BaseTravelRecord = Record(({
     id:-1,
     destination:'',
     departureDate:null,
-    returnDate:null
+    returnDate:null,
+    note:''
 }:{|
     id:number,
     destination:TravelDestination,
     departureDate:?number, //saranno dei long
-    returnDate:?number
+    returnDate:?number,
+    note:TravelNote
 |}))
 
 const baseTravelState = BaseTravelRecord();
@@ -41,7 +44,8 @@ const updateCompletedTravels = function(state:TravelRecordType, payload:Complete
                     id:++index,
                     destination:item.destination,
                     departureDate:item.departureDate,
-                    returnDate:item.returnDate
+                    returnDate:item.returnDate,
+                    note: item.note
                 })
                 return map.set(index, base);
 

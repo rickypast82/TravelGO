@@ -5,17 +5,20 @@ import { type CompletedTravelsT} from '../actionCreators'
 const base1= {
     destination:'Rome',
     departureDate:1000,
-    returnDate:1500
+    returnDate:1500,
+    note:'note di Rome'
 };
 const base2= {
     destination:'New York',
     departureDate:1800,
-    returnDate:2000
+    returnDate:2000,
+    note:'note di New York'
 };
 const base3= {
     destination:'Bangkok',
     departureDate:2200,
-    returnDate:3000
+    returnDate:3000,
+    note:'note di Bangkok'
 };
 export const COMPLETED_TRAVELS:CompletedTravelsT = {travels:[base1,base2,base3]};
 
@@ -24,6 +27,7 @@ const BASE_TRAVEL1 = BaseTravelRecord ({
     destination:'Rome',
     departureDate:1000,
     returnDate:1500,
+    note:'note di Rome'
 });
 
 const BASE_TRAVEL2 = BaseTravelRecord ({
@@ -31,6 +35,7 @@ const BASE_TRAVEL2 = BaseTravelRecord ({
     destination:'New York',
     departureDate:1800,
     returnDate:2000,
+    note:'note di New York'
 });
 
 const BASE_TRAVEL3 = BaseTravelRecord ({
@@ -38,6 +43,7 @@ const BASE_TRAVEL3 = BaseTravelRecord ({
     destination:'Bangkok',
     departureDate:2200,
     returnDate:3000,
+    note:'note di Bangkok'
 });
 
 const MAP1 = Map();
