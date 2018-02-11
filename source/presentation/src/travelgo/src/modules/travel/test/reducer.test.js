@@ -1,8 +1,7 @@
-
-import { List } from 'immutable'
 import * as matchers from 'jest-immutable-matchers';
 import travel, {TravelRecord, type TravelRecordType} from '../reducer'
-import { updateCompletedTravels, type CompletedTravels} from '../actionCreators'
+import { updateCompletedTravels} from '../actionCreators'
+import {TRAVEL_STATE, COMPLETED_TRAVELS} from './mockeddata'
 
 describe('travel  reducer test', () => {
 
@@ -12,12 +11,8 @@ describe('travel  reducer test', () => {
     
     it('update completed travels', () => {
         const stateBefore:TravelRecordType = TravelRecord();
-        const travels:CompletedTravels = {travels:['Rome','New York']};
-        const stareAfter = travel(stateBefore,updateCompletedTravels(travels));
-        const stateExpected:TravelRecordType = TravelRecord({
-            names: List(['Rome','New York'])
-        })
-        expect(stareAfter).toEqualImmutable(stateExpected);
+        const stareAfter = travel(stateBefore,updateCompletedTravels(COMPLETED_TRAVELS));
+        expect(stareAfter).toEqualImmutable(TRAVEL_STATE);
     });
 
     

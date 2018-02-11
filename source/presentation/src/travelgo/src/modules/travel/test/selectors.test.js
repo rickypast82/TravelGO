@@ -13,7 +13,6 @@ describe('Travel selectors', () => {
 
     it('retrieves a valid travel record (valid state)', () => {
         const travel = getTravel(MOCK.TRAVEL_STATE);
-        console.log(MOCK.TRAVEL_STATE);
         expect(travel === MOCK.TRAVEL_STATE).toBeTruthy();
     });
 

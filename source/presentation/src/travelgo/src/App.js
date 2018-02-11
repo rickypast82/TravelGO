@@ -4,12 +4,14 @@ import './App.css';
 
 class App extends Component {
 
+    /*
 	componentDidMount(){
 		console.log('qui lanciare la action di init ?')
-		/**
-		 * ci saraà poi un midleware che intercetta la chiamata init e farà la fetch per inizializzare la travelList
-		 */
-	}
+		
+		// ci sara' poi un midleware che intercetta la chiamata init e farà la fetch per inizializzare la travelList
+		 
+    }
+    */
 
 	render() {
 		return (

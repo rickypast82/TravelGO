@@ -1,22 +1,56 @@
 //@flow
-import { Record, List} from 'immutable'
+import { Record, Map} from 'immutable'
 import { UPDATE_COMPLETED_TRAVELS } from './actionDefinitions'
-import { type CompletedTravels } from './actionCreators'
+import { type CompletedTravelsT } from './actionCreators'
 import { createLeaf, createReducer }  from '../../lib-redux-helper'
 
-const TravelRecord = Record(({
-    names: List()
+type TravelDestination=string;
+
+export const BaseTravelRecord = Record(({
+    id:-1,
+    destination:'',
+    departureDate:null,
+    returnDate:null
 }:{|
-    names:List<string>
+    id:number,
+    destination:TravelDestination,
+    departureDate:?number, //saranno dei long
+    returnDate:?number
+|}))
+
+const baseTravelState = BaseTravelRecord();
+export type BaseTravelRecordType = typeof baseTravelState;
+
+const TravelRecord = Record(({
+    destinations: Map(),
+}:{|
+    destinations:Map<TravelDestination,BaseTravelRecordType>
 |}))
 
 const initialState = TravelRecord();
 export type TravelRecordType = typeof initialState;
 
-const updateCompletedTravels = function(state:TravelRecordType, payload:CompletedTravels):TravelRecordType{
+const updateCompletedTravels = function(state:TravelRecordType, payload:CompletedTravelsT):TravelRecordType{
     const {travels} = payload;
-    const names = List(travels);
-    return state.set('names',names);
+    if(travels){
+        let index = 0;
+        const map1 = Map();
+        const destinations = map1.withMutations(map=>{
+            travels.forEach(function(item) {
+                const base = BaseTravelRecord({
+                    id:++index,
+                    destination:item.destination,
+                    departureDate:item.departureDate,
+                    returnDate:item.returnDate
+                })
+                return map.set(index, base);
+
+            });
+        })
+        
+        return state.set('destinations',destinations); 
+    }
+    return state;
 }
 
 const travel = createReducer(initialState,[
