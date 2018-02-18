@@ -2,7 +2,14 @@
 import * as matchers from 'jest-immutable-matchers';
 import * as MOCK from './mockeddata';
 
-import { getTravel, getAllDestinations} from '../selectors';
+import { 
+    getTravel, 
+    getAllDestinations,
+    getSelectedDestinationId,
+    getSelectedDestinationItem
+} from '../selectors';
+
+import { BaseTravelRecord } from '../reducer'
 
 describe('Travel selectors', () => {
 
@@ -13,17 +20,27 @@ describe('Travel selectors', () => {
 
     it('retrieves a valid travel record (valid state)', () => {
         const travel = getTravel(MOCK.TRAVEL_STATE_NO_SELECTION);
-        expect(travel === MOCK.TRAVEL_STATE_NO_SELECTION).toBeTruthy();
+        expect(travel).toEqualImmutable(MOCK.TRAVEL_STATE_NO_SELECTION);
     });
 
     it('retrieves all destinations', () => {
         const destinations = getAllDestinations(MOCK.TRAVEL_STATE_NO_SELECTION);
-        expect(destinations === MOCK.TRAVEL_MAP).toBeTruthy();
+        expect(destinations).toEqualImmutable(MOCK.TRAVEL_MAP);
     });
 
-    /*it('retrieves destination with details by id', () => {
-        const destination1 = getDestinationById(1);
-        expect(destination1 === MOCK.BASE_TRAVEL1).toBeTruthy();
+    it('getSelectedDestinationId', () => {
+        const id = getSelectedDestinationId(MOCK.TRAVEL_STATE_NO_SELECTION);
+        expect(id === -1).toBeTruthy();
     });
-    */
+
+    it('getSelectedDestinationId with existing id', () => {
+        const destination = getSelectedDestinationItem(MOCK.TRAVEL_STATE_WITH_SELECTION);
+        expect(destination).toEqualImmutable(MOCK.BASE_TRAVEL1);
+    });
+
+    it('getSelectedDestinationId with not existing id', () => {
+        const destination = getSelectedDestinationItem(MOCK.TRAVEL_STATE_NO_SELECTION);
+        expect(destination).toEqualImmutable(BaseTravelRecord());
+    });
+    
 });
