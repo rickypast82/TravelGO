@@ -20,11 +20,13 @@ describe('Travel selectors', () => {
 
     it('retrieves a valid travel record (valid state)', () => {
         const travel = getTravel(MOCK.TRAVEL_STATE_NO_SELECTION);
+        // $FlowFixMe
         expect(travel).toEqualImmutable(MOCK.TRAVEL_STATE_NO_SELECTION);
     });
 
     it('retrieves all destinations', () => {
         const destinations = getAllDestinations(MOCK.TRAVEL_STATE_NO_SELECTION);
+        // $FlowFixMe
         expect(destinations).toEqualImmutable(MOCK.TRAVEL_MAP);
     });
 
@@ -35,11 +37,13 @@ describe('Travel selectors', () => {
 
     it('getSelectedDestinationId with existing id', () => {
         const destination = getSelectedDestinationItem(MOCK.TRAVEL_STATE_WITH_SELECTION);
+        // $FlowFixMe
         expect(destination).toEqualImmutable(MOCK.BASE_TRAVEL1);
     });
 
     it('getSelectedDestinationId with not existing id', () => {
         const destination = getSelectedDestinationItem(MOCK.TRAVEL_STATE_NO_SELECTION);
+        // $FlowFixMe
         expect(destination).toEqualImmutable(BaseTravelRecord());
     });
     

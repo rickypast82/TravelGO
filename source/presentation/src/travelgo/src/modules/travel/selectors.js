@@ -1,7 +1,7 @@
 //@flow
 import { Map } from 'immutable'
 import { createSelector } from 'reselect'
-import { type State, checkState } from '../../lib-redux-helper'
+import { type State, checkState } from '../../lib/redux-helper'
 import { type TravelRecordType, BaseTravelRecord } from './reducer'
 
 let getRoot = (s:TravelRecordType) => s; 

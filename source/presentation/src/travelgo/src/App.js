@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TravelCard from './view/travelWidget/components/TravelCard'
 
 class App extends Component {
 
@@ -20,9 +21,7 @@ class App extends Component {
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to TravelGO</h1>
 				</header>
-				<p className="App-intro">
-					Think about travel... everything, everywhere, every days... and GO
-				</p>
+				<TravelCard id={1} destination='Roma' note='note roma' departureDate={200} returnDate={300}/>
 			</div>
 		);
 	}

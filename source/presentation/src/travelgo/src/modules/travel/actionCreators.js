@@ -1,5 +1,5 @@
 //@flow
-import { actionCreatorBase, type Action } from '../../lib-redux-helper'
+import { actionCreatorBase, type Action } from '../../lib/redux-helper'
 import { UPDATE_COMPLETED_TRAVELS,SELECT_DESTINATION} from './actionDefinitions'
 
 type BaseCompletedTravelsT = {|

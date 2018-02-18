@@ -2,7 +2,7 @@
 import { Record, Map} from 'immutable'
 import { UPDATE_COMPLETED_TRAVELS, SELECT_DESTINATION } from './actionDefinitions'
 import { type CompletedTravelsT, type SelectIdDestionationT } from './actionCreators'
-import { createLeaf, createReducer }  from '../../lib-redux-helper'
+import { createLeaf, createReducer }  from '../../lib/redux-helper'
 
 type TravelDestination=string;
 type TravelNote=string;

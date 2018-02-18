@@ -6,7 +6,7 @@ import {
     type CompletedTravelsT}
 from '../actionCreators';
 import { UPDATE_COMPLETED_TRAVELS, SELECT_DESTINATION} from '../actionDefinitions';
-import { Action } from '../../../lib-redux-helper/index';
+import { Action } from '../../../lib/redux-helper';
 
 describe('travels action creators test', () => {
 

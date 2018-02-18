@@ -1,5 +1,5 @@
 // @flow
-import { combineReducersAndSelector, type ReducersMap } from '../lib-redux-helper'
+import { combineReducersAndSelector, type ReducersMap } from '../lib/redux-helper'
 import { responsiveStateReducer } from 'redux-responsive'
 import travel, {setRootTravel} from './travel'
 
