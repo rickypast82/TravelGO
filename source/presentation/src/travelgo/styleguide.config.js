@@ -2,7 +2,7 @@ module.exports = {
     sections: [
      {
        name: 'Components',
-       components: 'src/views/**/components/**/*.js'
+       components: 'src/view/**/components/**/*.js'
      },
    ],
  };
