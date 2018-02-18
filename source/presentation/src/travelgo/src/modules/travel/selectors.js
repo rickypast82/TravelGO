@@ -1,4 +1,5 @@
 //@flow
+import { Map } from 'immutable'
 import { createSelector } from 'reselect'
 import { type State, checkState } from '../../lib-redux-helper'
 import { type TravelRecordType } from './reducer'
@@ -10,6 +11,13 @@ export function setRootTravel(root:State=>?TravelRecordType){
 
 export const getTravel = (state:State):TravelRecordType => checkState(getRoot(state));
 
-export const getTravelNames = createSelector( [getTravel],(travel) => {
-    return travel ? travel.names : null;
-} ); 
+export const getAllDestinations = createSelector( [getTravel],(travel) => {
+    return travel.destinations || Map();
+});
+
+/*
+export const getDestinationById = createSelector( [getAllDestinations],(destinations) => {
+    return travel ? travel.destinations : null;
+});
+
+*/

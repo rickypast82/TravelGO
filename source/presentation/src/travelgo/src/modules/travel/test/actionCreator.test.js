@@ -1,6 +1,11 @@
 //@flow
-import { updateCompletedTravels, type CompletedTravelsT} from '../actionCreators';
-import { UPDATE_COMPLETED_TRAVELS } from '../actionDefinitions';
+/*eslint no-magic-numbers: "off"*/
+import {
+    selectDestination,
+    updateCompletedTravels,
+    type CompletedTravelsT}
+from '../actionCreators';
+import { UPDATE_COMPLETED_TRAVELS, SELECT_DESTINATION} from '../actionDefinitions';
 import { Action } from '../../../lib-redux-helper/index';
 
 describe('travels action creators test', () => {
@@ -29,4 +34,15 @@ describe('travels action creators test', () => {
     });
 
 
+    it('SELECT_DESTINATION Action', () => {
+
+        const expectedDestination:Action<number> = {
+            type: SELECT_DESTINATION,
+            payload:{
+                idDestination:1
+            }
+        }
+        const actualDestination = selectDestination({idDestination:1});
+        expect(actualDestination).toEqual(expectedDestination);
+    });
 });

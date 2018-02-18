@@ -1,7 +1,7 @@
 //@flow
 import { Record, Map} from 'immutable'
-import { UPDATE_COMPLETED_TRAVELS } from './actionDefinitions'
-import { type CompletedTravelsT } from './actionCreators'
+import { UPDATE_COMPLETED_TRAVELS, SELECT_DESTINATION } from './actionDefinitions'
+import { type CompletedTravelsT, type SelectIdDestionationT } from './actionCreators'
 import { createLeaf, createReducer }  from '../../lib-redux-helper'
 
 type TravelDestination=string;
@@ -26,8 +26,10 @@ export type BaseTravelRecordType = typeof baseTravelState;
 
 const TravelRecord = Record(({
     destinations: Map(),
+    selectedDestination: -1
 }:{|
-    destinations:Map<TravelDestination,BaseTravelRecordType>
+    destinations:Map<TravelDestination,BaseTravelRecordType>,
+    selectedDestination:number
 |}))
 
 const initialState = TravelRecord();
@@ -57,8 +59,14 @@ const updateCompletedTravels = function(state:TravelRecordType, payload:Complete
     return state;
 }
 
+const selectDestination = function(state:TravelRecordType, payload:SelectIdDestionationT):TravelRecordType{
+    const {idDestination} = payload;
+    return state.set('selectedDestination',idDestination);
+}
+
 const travel = createReducer(initialState,[
-    createLeaf( UPDATE_COMPLETED_TRAVELS, updateCompletedTravels)
+    createLeaf( UPDATE_COMPLETED_TRAVELS, updateCompletedTravels),
+    createLeaf( SELECT_DESTINATION, selectDestination)
 ]);
 
 export {TravelRecord};
