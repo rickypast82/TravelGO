@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TravelCard components test renders without crashing with all props 1`] = `
+<styled.div
+  cardSize="MEDIUM@travelWidget"
+  className="travelCardDivContainer"
+>
+  <styled.div>
+    <styled.img
+      imageSize="MEDIUM@travelWidget"
+      src="Roma.jpg"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      Roma
+       
+    </styled.div>
+    <styled.div>
+       
+      note roma
+    </styled.div>
+    <styled.div>
+       
+      200
+    </styled.div>
+    <styled.div>
+       
+      300
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`TravelCard components test renders without crashing with required props 1`] = `
+<styled.div
+  className="travelCardDivContainer"
+>
+  <styled.div>
+    <styled.img
+      src="Roma.jpg"
+    />
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      Roma
+       
+    </styled.div>
+    <styled.div>
+       
+      note roma
+    </styled.div>
+    <styled.div>
+       
+    </styled.div>
+    <styled.div>
+       
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

@@ -8,8 +8,8 @@ import { SMALL_SIZE, type SizeTravelWidget } from '../constants'
 type Props = {|
     id:number,
     destination:string,
-    departureDate:?number,
-    returnDate:?number,
+    departureDate?:number,
+    returnDate?:number,
     note:string,
     cardSize?:SizeTravelWidget,
     imageSrc:string
@@ -19,7 +19,6 @@ const SMALL_WIDTH = 25;
 const MEDIUM_WIDTH = 35;
 
 export const getWidth = (size?:SizeTravelWidget) =>{
-    console.log(size)
     if(size)
         return size === SMALL_SIZE ? SMALL_WIDTH : MEDIUM_WIDTH;
     else
@@ -39,7 +38,6 @@ const Text = styled.div``
 
 
 const TravelCard = (props:Props) => {
-    console.log(props)
     return( 
         <Container className='travelCardDivContainer' cardSize={props.cardSize}>
             <Header>

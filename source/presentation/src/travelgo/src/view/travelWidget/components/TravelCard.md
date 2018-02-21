@@ -23,3 +23,11 @@
     cardSize='MEDIUM@travelWidget'
     />
 ```
+### TravelCard no departureDate, no returnDate ###
+
+```js
+<TravelCard id={1} 
+    destination='Roma' 
+    note='note roma' 
+    imageSrc='Roma.jpg'
+    />

@@ -2,9 +2,8 @@
 /*eslint no-magic-numbers: "off"*/
 import React from 'react'
 import { shallow } from 'enzyme'
-import { getWidth } from '../TravelImage'
+import TravelImage,{ getWidth } from '../TravelImage'
 import { SMALL_SIZE, MEDIUM_SIZE} from '../../constants'
-import TravelImage from '../TravelImage'
 
 describe('TravelImage components test', () => {
     
@@ -18,7 +17,7 @@ describe('TravelImage components test', () => {
         expect(size).toEqual(25);
     });
 
-    it('getWidth from imageSize null', () => {
+    it('getWidth from imageSize undefined', () => {
         const size = getWidth();
         expect(size).toEqual(15);
     });
