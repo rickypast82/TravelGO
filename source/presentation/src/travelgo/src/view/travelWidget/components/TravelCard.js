@@ -19,6 +19,7 @@ const SMALL_WIDTH = 25;
 const MEDIUM_WIDTH = 35;
 
 export const getWidth = (size?:SizeTravelWidget) =>{
+    console.log(size)
     if(size)
         return size === SMALL_SIZE ? SMALL_WIDTH : MEDIUM_WIDTH;
     else
@@ -38,8 +39,9 @@ const Text = styled.div``
 
 
 const TravelCard = (props:Props) => {
+    console.log(props)
     return( 
-        <Container className='travelCardDivContainer'>
+        <Container className='travelCardDivContainer' cardSize={props.cardSize}>
             <Header>
                <TravelImage imageSize={props.cardSize} src={getResource(props.imageSrc)} />
             </Header>

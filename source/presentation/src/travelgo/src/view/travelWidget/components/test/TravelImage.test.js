@@ -1,7 +1,10 @@
 //@flow
 /*eslint no-magic-numbers: "off"*/
-import {getWidth} from '../TravelImage'
+import React from 'react'
+import { shallow } from 'enzyme'
+import { getWidth } from '../TravelImage'
 import { SMALL_SIZE, MEDIUM_SIZE} from '../../constants'
+import TravelImage from '../TravelImage'
 
 describe('TravelImage components test', () => {
     
@@ -16,8 +19,13 @@ describe('TravelImage components test', () => {
     });
 
     it('getWidth from imageSize null', () => {
-        const size = getWidth(null);
+        const size = getWidth();
         expect(size).toEqual(15);
+    });
+
+    it('renders without crashing with all props', () => {
+        const wrapper = shallow( <TravelImage src='Roma.jpg'/>);
+        expect(wrapper).toMatchSnapshot();
     });
 
 });

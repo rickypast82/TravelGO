@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TravelImage components test renders without crashing with all props 1`] = `
+<img
+  className="sc-bdVaJa jmKZPM"
+  src="Roma.jpg"
+/>
+`;
