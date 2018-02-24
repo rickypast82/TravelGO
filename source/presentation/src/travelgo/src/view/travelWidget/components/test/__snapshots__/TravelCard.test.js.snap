@@ -5,13 +5,18 @@ exports[`TravelCard components test renders without crashing with all props 1`] 
   cardSize="MEDIUM@travelWidget"
   className="travelCardDivContainer"
 >
-  <styled.div>
+  <styled.div
+    className="travelCardHeader"
+  >
     <styled.img
       imageSize="MEDIUM@travelWidget"
       src="Roma.jpg"
     />
   </styled.div>
-  <styled.div>
+  <styled.div
+    cardSize="MEDIUM@travelWidget"
+    className="travelCardBody"
+  >
     <styled.div>
       Roma
        
@@ -29,6 +34,9 @@ exports[`TravelCard components test renders without crashing with all props 1`] 
       300
     </styled.div>
   </styled.div>
+  <styled.div
+    className="travelCardFooter"
+  />
 </styled.div>
 `;
 
@@ -36,12 +44,16 @@ exports[`TravelCard components test renders without crashing with required props
 <styled.div
   className="travelCardDivContainer"
 >
-  <styled.div>
+  <styled.div
+    className="travelCardHeader"
+  >
     <styled.img
       src="Roma.jpg"
     />
   </styled.div>
-  <styled.div>
+  <styled.div
+    className="travelCardBody"
+  >
     <styled.div>
       Roma
        
@@ -57,5 +69,8 @@ exports[`TravelCard components test renders without crashing with required props
        
     </styled.div>
   </styled.div>
+  <styled.div
+    className="travelCardFooter"
+  />
 </styled.div>
 `;

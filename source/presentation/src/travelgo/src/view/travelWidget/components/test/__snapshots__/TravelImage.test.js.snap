@@ -2,7 +2,7 @@
 
 exports[`TravelImage components test renders without crashing with all props 1`] = `
 <img
-  className="sc-bdVaJa jmKZPM"
+  className="sc-bdVaJa dCbezb"
   src="Roma.jpg"
 />
 `;
