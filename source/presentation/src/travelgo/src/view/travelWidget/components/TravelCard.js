@@ -35,13 +35,15 @@ export const getWidthBody = (size?:SizeTravelWidget) =>{
 }
 
 const Container = styled.div`
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: ${(props:Props) => getWidth(props.cardSize) + 'em'};
 `
 const Header = styled.div`
-    display:flex;
 `
 const Body = styled.div`
-    display:flex;
+    padding: 1em;
     border-left: 1px solid rgba(0,0,0,.125);
     border-bottom: 1px solid rgba(0,0,0,.125);
     border-right: 1px solid rgba(0,0,0,.125);
