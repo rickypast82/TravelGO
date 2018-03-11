@@ -38,10 +38,10 @@ const Container = styled.div`
     width: ${(props:Props) => getWidth(props.cardSize) + 'em'};
 `
 const Header = styled.div`
-    display:block;
+    display:flex;
 `
 const Body = styled.div`
-    display:block;
+    display:flex;
     border-left: 1px solid rgba(0,0,0,.125);
     border-bottom: 1px solid rgba(0,0,0,.125);
     border-right: 1px solid rgba(0,0,0,.125);
