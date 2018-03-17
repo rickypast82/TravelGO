@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import TravelCard from './view/travelWidget/components/TravelCard'
+import TravelCard from '../travelWidget/components/TravelCard'
 
 class App extends Component {
 
@@ -18,7 +16,6 @@ class App extends Component {
 		return (
 			<div className="App">
 				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to TravelGO</h1>
 				</header>
 				<TravelCard id={1} 
