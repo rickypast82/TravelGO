@@ -12,7 +12,7 @@ module.exports = {
                 '**/constants.js', 
                 '**/containers/**/*.*',
                 '**/AppCommon.js',
-                '**/AppStAmpe.js',
+                '**/App.js',
             ],
     sections: [
     {

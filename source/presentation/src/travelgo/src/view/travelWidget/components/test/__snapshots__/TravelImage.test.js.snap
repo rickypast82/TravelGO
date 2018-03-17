@@ -4,7 +4,6 @@ exports[`TravelImage components test renders without crashing with all props 1`]
 <Image
   as="img"
   rounded={true}
-  size="small"
   src="Roma.jpg"
   ui={true}
 />
