@@ -1,10 +1,12 @@
 //@flow
-import styled from 'styled-components'
+import React from 'react';
+import { Image} from '../../../gui';
 
-const TravelImage = styled.img`
-    width: 100%;
-    height: 100%; 
-    border-radius: 3px;
-`;
+type Props = {|src:string|};
 
+const TravelImage = ({src}:Props) => <Image 
+                                        size='small' 
+                                        src={src}
+                                        rounded
+                                    />
 export default TravelImage;

@@ -1,32 +1,18 @@
-### TravelCard SMALL ###
+### TravelCard2 use gui components  ###
 
 ```js
-<TravelCard id={1} 
+<TravelCard2 id={1} 
     destination='Roma' 
     note='note roma' 
     departureDate={200} 
     returnDate={300}
     imageSrc='Roma.jpg'
-    cardSize='SMALL@travelWidget'
     />
 ```
-
-### TravelCard MEDIUM ###
-
-```js
-<TravelCard id={1} 
-    destination='Roma' 
-    note='note roma' 
-    departureDate={200} 
-    returnDate={300}
-    imageSrc='Roma.jpg'
-    cardSize='MEDIUM@travelWidget'
-    />
-```
-### TravelCard no departureDate, no returnDate ###
+### TravelCard2 no departureDate, no returnDate ###
 
 ```js
-<TravelCard id={1} 
+<TravelCard2 id={1} 
     destination='Roma' 
     note='note roma' 
     imageSrc='Roma.jpg'

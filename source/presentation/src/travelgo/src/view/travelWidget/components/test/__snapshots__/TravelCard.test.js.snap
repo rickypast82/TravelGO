@@ -1,76 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TravelCard components test renders without crashing with all props 1`] = `
-<styled.div
-  cardSize="MEDIUM@travelWidget"
-  className="travelCardDivContainer"
->
-  <styled.div
-    className="travelCardHeader"
-  >
-    <styled.img
-      imageSize="MEDIUM@travelWidget"
-      src="Roma.jpg"
-    />
-  </styled.div>
-  <styled.div
-    cardSize="MEDIUM@travelWidget"
-    className="travelCardBody"
-  >
-    <styled.div>
+<Card>
+  <CardContent>
+    <CardHeader>
+       
       Roma
        
-    </styled.div>
-    <styled.div>
+    </CardHeader>
+    <TravelImage
+      src="Roma.jpg"
+    />
+    <CardMeta>
+      <FeedDate>
+        200
+         
+      </FeedDate>
+      <FeedDate>
+        300
+         
+      </FeedDate>
+    </CardMeta>
+  </CardContent>
+  <CardContent>
+    <CardDescription>
        
       note roma
-    </styled.div>
-    <styled.div>
        
-      200
-    </styled.div>
-    <styled.div>
-       
-      300
-    </styled.div>
-  </styled.div>
-  <styled.div
-    className="travelCardFooter"
-  />
-</styled.div>
+    </CardDescription>
+  </CardContent>
+</Card>
 `;
 
 exports[`TravelCard components test renders without crashing with required props 1`] = `
-<styled.div
-  className="travelCardDivContainer"
->
-  <styled.div
-    className="travelCardHeader"
-  >
-    <styled.img
-      src="Roma.jpg"
-    />
-  </styled.div>
-  <styled.div
-    className="travelCardBody"
-  >
-    <styled.div>
+<Card>
+  <CardContent>
+    <CardHeader>
+       
       Roma
        
-    </styled.div>
-    <styled.div>
+    </CardHeader>
+    <TravelImage
+      src="Roma.jpg"
+    />
+    <CardMeta>
+      <FeedDate>
+         
+      </FeedDate>
+      <FeedDate>
+         
+      </FeedDate>
+    </CardMeta>
+  </CardContent>
+  <CardContent>
+    <CardDescription>
        
       note roma
-    </styled.div>
-    <styled.div>
        
-    </styled.div>
-    <styled.div>
-       
-    </styled.div>
-  </styled.div>
-  <styled.div
-    className="travelCardFooter"
-  />
-</styled.div>
+    </CardDescription>
+  </CardContent>
+</Card>
 `;

@@ -1,8 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TravelImage components test renders without crashing with all props 1`] = `
-<img
-  className="sc-bdVaJa dCbezb"
+<Image
+  as="img"
+  rounded={true}
+  size="small"
   src="Roma.jpg"
+  ui={true}
 />
 `;
