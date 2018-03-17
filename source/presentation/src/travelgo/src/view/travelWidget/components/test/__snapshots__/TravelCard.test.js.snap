@@ -11,7 +11,7 @@ exports[`TravelCard components test renders without crashing with all props 1`] 
     <TravelImage
       src="Roma.jpg"
     />
-    <CardMeta>
+    <Styled(CardMeta)>
       <FeedDate>
         200
          
@@ -20,7 +20,7 @@ exports[`TravelCard components test renders without crashing with all props 1`] 
         300
          
       </FeedDate>
-    </CardMeta>
+    </Styled(CardMeta)>
   </CardContent>
   <CardContent>
     <CardDescription>
@@ -43,14 +43,14 @@ exports[`TravelCard components test renders without crashing with required props
     <TravelImage
       src="Roma.jpg"
     />
-    <CardMeta>
+    <Styled(CardMeta)>
       <FeedDate>
          
       </FeedDate>
       <FeedDate>
          
       </FeedDate>
-    </CardMeta>
+    </Styled(CardMeta)>
   </CardContent>
   <CardContent>
     <CardDescription>

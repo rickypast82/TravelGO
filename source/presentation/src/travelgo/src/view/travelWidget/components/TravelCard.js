@@ -1,6 +1,6 @@
 //@flow
 import React from 'react';
-//import styled from 'styled-components';
+import styled from 'styled-components';
 import { getResource } from '../../../lib/resource-utility/utils';
 import { Card, CardHeader, CardDescription, CardContent, CardMeta, FeedDate} from '../../../gui';
 import TravelImage from './TravelImage';
@@ -14,17 +14,21 @@ type Props = {|
     returnDate ?: number
 |};
 
-const TravelCard2 = ({ destination, departureDate, imageSrc, note, returnDate }: Props) => {
+const CardMetaCustom = styled(CardMeta)`
+    display: flex;
+`
+
+const TravelCard = ({ destination, departureDate, imageSrc, note, returnDate }: Props) => {
 
     return (
         <Card>
             <CardContent>
                 <CardHeader> { destination} </CardHeader>
                 <TravelImage src={getResource(imageSrc)} />
-                <CardMeta>
+                <CardMetaCustom>
                     <FeedDate>{ departureDate} </FeedDate> 
                     <FeedDate>{ returnDate} </FeedDate> 
-                </CardMeta>
+                </CardMetaCustom>
             </CardContent>
             <CardContent>
                 <CardDescription> {note} </CardDescription>
@@ -33,4 +37,4 @@ const TravelCard2 = ({ destination, departureDate, imageSrc, note, returnDate }:
     )
 };
 
-export default TravelCard2;
+export default TravelCard;
