@@ -1,7 +1,7 @@
 //@flow
 /*eslint no-magic-numbers: "off"*/
 import {Map} from 'immutable'
-import { BaseTravelRecord, TravelRecord, type TravelRecordType} from '../reducer'
+import { BaseTravelRecord, TravelRecord, type TravelRecordT} from '../reducer'
 import { type CompletedTravelsT} from '../actionCreators'
 
 const base1= {
@@ -53,12 +53,12 @@ export const TRAVEL_MAP = MAP1.withMutations(map => {
     map.set(1, BASE_TRAVEL1).set(2, BASE_TRAVEL2).set(3,BASE_TRAVEL3)
 });
 
-export const TRAVEL_STATE_NO_SELECTION:TravelRecordType = TravelRecord({
+export const TRAVEL_STATE_NO_SELECTION:TravelRecordT = TravelRecord({
     destinations: TRAVEL_MAP,
     selectedDestination: -1
 })
 
-export const TRAVEL_STATE_WITH_SELECTION:TravelRecordType = TravelRecord({
+export const TRAVEL_STATE_WITH_SELECTION:TravelRecordT = TravelRecord({
     destinations: TRAVEL_MAP,
     selectedDestination: 1
 })

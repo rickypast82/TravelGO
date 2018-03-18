@@ -11,7 +11,7 @@ const stateTransformer = (state) => {
 };
 
 const loggerMiddleware = createLogger({
-  stateTransformer,
+  stateTransformer
 });
 
 export const isProduction = () => (process.env.NODE_ENV === 'production');
@@ -24,7 +24,7 @@ export const composeEnhancer = (production=isProduction()) =>
 const enhancer = composeEnhancer()(
     responsiveStoreEnhancer,
     applyMiddleware(
-        loggerMiddleware,
+        loggerMiddleware
     )
 );
 

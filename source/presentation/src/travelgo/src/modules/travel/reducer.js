@@ -22,20 +22,22 @@ export const BaseTravelRecord = Record(({
 |}))
 
 const baseTravelState = BaseTravelRecord();
-export type BaseTravelRecordType = typeof baseTravelState;
+export type BaseTravelRecordT = typeof baseTravelState;
+
+export type DestinationsT = Map<number,BaseTravelRecordT>;
 
 const TravelRecord = Record(({
     destinations: Map(),
     selectedDestination: -1
 }:{|
-    destinations:Map<TravelDestination,BaseTravelRecordType>,
+    destinations:DestinationsT,
     selectedDestination:number
 |}))
 
 const initialState = TravelRecord();
-export type TravelRecordType = typeof initialState;
+export type TravelRecordT = typeof initialState;
 
-const updateCompletedTravels = function(state:TravelRecordType, payload:CompletedTravelsT):TravelRecordType{
+const updateCompletedTravels = function(state:TravelRecordT, payload:CompletedTravelsT):TravelRecordT{
     const {travels} = payload;
     if(travels){
         let index = 0;
@@ -59,7 +61,7 @@ const updateCompletedTravels = function(state:TravelRecordType, payload:Complete
     return state;
 }
 
-const selectDestination = function(state:TravelRecordType, payload:SelectIdDestionationT):TravelRecordType{
+const selectDestination = function(state:TravelRecordT, payload:SelectIdDestionationT):TravelRecordT{
     const {idDestination} = payload;
     return state.set('selectedDestination',idDestination);
 }

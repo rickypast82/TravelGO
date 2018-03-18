@@ -18,7 +18,7 @@ const CardMetaCustom = styled(CardMeta)`
     display: flex;
 `
 
-const TravelCard = ({ destination, departureDate, imageSrc, note, returnDate }: Props) => {
+const TravelCard = ({ destination, departureDate,id, imageSrc, note, returnDate }: Props) => {
 
     return (
         <Card>

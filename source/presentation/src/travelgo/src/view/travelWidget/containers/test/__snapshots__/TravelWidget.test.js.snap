@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TravelWidgetContainer  test renders without crashing with all props 1`] = `
+<styled.div
+  id="TravelWidgetContainerDiv"
+>
+  1
+  <TravelCard
+    departureDate={100}
+    destination="Rome"
+    id={1}
+    imageSrc="Roma.jpg"
+    key="1"
+    note="note di roma"
+    returnDate={200}
+  />
+  2
+  <TravelCard
+    departureDate={300}
+    destination="Venice"
+    id={2}
+    imageSrc="Roma.jpg"
+    key="2"
+    note="note di venezia"
+    returnDate={400}
+  />
+</styled.div>
+`;
