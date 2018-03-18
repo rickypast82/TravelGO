@@ -2,6 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import { CardGroup } from '../../../gui';
 
 import { type State} from '../../../lib/redux-helper';
 import { 
@@ -17,20 +18,25 @@ type StateProps = {|
     destinations:DestinationsT
 |};
 
-const ContainerDiv = styled.div``;
+const ContainerDiv = styled(CardGroup)`
+    padding: 1em;
+`;
 
 const TravelWidgetContainer = ({destinations}: StateProps) => { 
-
+    const destinationsObject = destinations.toArray();
     return (
         <ContainerDiv id='TravelWidgetContainerDiv'>
-            {destinations.map(item => (
+            {destinationsObject.map(item =>(
                 <TravelCard key={item.id} 
                     id={item.id}
                     destination={item.destination} 
                     departureDate={item.departureDate} 
                     note={item.note}
                     returnDate={item.returnDate}
-                    imageSrc='Roma.jpg'/>))}
+                    imageSrc='Roma.jpg'/>
+                ))
+            }
+                
         </ContainerDiv>
     )
 };

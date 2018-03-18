@@ -1,4 +1,4 @@
-### TravelCard2 use gui components  ###
+### TravelCard ###
 
 ```js
 <TravelCard id={1} 
@@ -9,7 +9,7 @@
     imageSrc='Roma.jpg'
     />
 ```
-### TravelCard2 no departureDate, no returnDate ###
+### TravelCard no departureDate, no returnDate ###
 
 ```js
 <TravelCard id={1} 
