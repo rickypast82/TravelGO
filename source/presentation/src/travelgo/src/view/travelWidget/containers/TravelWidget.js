@@ -20,6 +20,7 @@ type StateProps = {|
 
 const ContainerDiv = styled(CardGroup)`
     padding: 1em;
+    background-color:#f7f0b2;
 `;
 
 const TravelWidgetContainer = ({destinations}: StateProps) => { 
