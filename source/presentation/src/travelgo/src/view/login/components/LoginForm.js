@@ -1,6 +1,6 @@
 //@flow
 import React from 'react';
-import { Form, FormInput, FormCheckbox, Button } from '../../../gui';
+import { Form, FormInput, FormCheckbox, ButtonLogin, Divider } from '../../../gui';
 
 const LoginForm = () => {
     return (
@@ -19,7 +19,8 @@ const LoginForm = () => {
                 placeholder='Password'
                 type='password'
             />
-            <Button fluid >Login</Button>
+            <ButtonLogin />
+            <Divider />
             <FormCheckbox label='Ricorda password' />
 
         </Form>

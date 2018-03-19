@@ -5,11 +5,11 @@ import styled from 'styled-components';
 
 type ButtonProps = {
     backgroundColor?:string,
+    children?:Node,
     fluid?:boolean,
     label?:string,
-    textColor?:string,
-    children?:Node,
     size?:|'mini'|'tiny'|'small'|'medium'|'large'|'big'|'huge'|'massive',
+    textColor?:string,
 }
 
 const ButtonCustom = styled(ButtonSemanticUI)`
