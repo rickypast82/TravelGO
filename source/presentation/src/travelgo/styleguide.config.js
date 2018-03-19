@@ -18,6 +18,10 @@ module.exports = {
     {
         name: 'VIEWS',
         components: 'src/view/**/*.js'
+    },
+    {
+        name: 'GUI',
+        components: 'src/gui/**/*.js'
     }
     ]
 };
