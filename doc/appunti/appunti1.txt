@@ -1,0 +1,20 @@
+const Immutable = require('immutable');
+
+const RecordProva = Immutable.Record({
+    name:'',
+    age:-1
+})
+
+const prova = RecordProva({
+    name:'giulia',
+    age:30
+});
+
+const prova2 = RecordProva({
+    name:'riccardo',
+    age:35
+})
+
+const mappa = Immutable.Map({1:prova, 2:prova2});
+mappa.valueSeq().forEach(item=>console.log(item))
+
