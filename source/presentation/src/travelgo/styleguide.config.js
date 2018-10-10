@@ -13,6 +13,12 @@ module.exports = {
                 '**/containers/**/*.*',
                 '**/AppCommon.js',
                 '**/App.js',
+                '**/GenericGui.js',
+                '**/Image.js',
+                '**/Feed.js',
+                '**/Card.js',
+                '**/Form.js',
+                
             ],
     sections: [
     {
