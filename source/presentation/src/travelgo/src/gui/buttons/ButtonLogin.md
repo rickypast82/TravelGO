@@ -1,4 +1,0 @@
-### ButtonLogin ###
-
-```js
-<ButtonLogin />

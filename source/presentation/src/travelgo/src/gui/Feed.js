@@ -1,1 +1,0 @@
-export { Feed, FeedContent, FeedDate} from 'semantic-ui-react';
